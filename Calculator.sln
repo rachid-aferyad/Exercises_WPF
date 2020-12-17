@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{B01DCDD9-7C54-4BF1-BACD-AAAA6105E82B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Increment_Decrement", "Increment_Decrement\Increment_Decrement.csproj", "{52039A92-16C9-409D-A69F-8E0FA5354D60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B01DCDD9-7C54-4BF1-BACD-AAAA6105E82B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B01DCDD9-7C54-4BF1-BACD-AAAA6105E82B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B01DCDD9-7C54-4BF1-BACD-AAAA6105E82B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B01DCDD9-7C54-4BF1-BACD-AAAA6105E82B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52039A92-16C9-409D-A69F-8E0FA5354D60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52039A92-16C9-409D-A69F-8E0FA5354D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52039A92-16C9-409D-A69F-8E0FA5354D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52039A92-16C9-409D-A69F-8E0FA5354D60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CB67D65-6641-4367-AAEB-679B0681E33F}
+	EndGlobalSection
+EndGlobal
