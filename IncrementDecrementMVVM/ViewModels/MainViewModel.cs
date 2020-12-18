@@ -1,16 +1,19 @@
-﻿using System;
+﻿using IncrementDecrementMVVM.Commands;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace IncrementDecrementMVVM.ViewModels
 {
     class MainViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
+        private ICommand _incrementCommand;
+        private ICommand _decrementCommand;
         private int _value;
         public int Value
         {
@@ -27,28 +30,12 @@ namespace IncrementDecrementMVVM.ViewModels
                 }
             }
         }
+        public ICommand IncrementCommand { get => _incrementCommand ??= new DelegateCommand(() => Value++, () => Value < 9); }
+        public ICommand DecrementCommand { get => _decrementCommand ??= new DelegateCommand(() => Value--, () => Value > 0); }
+
         public MainViewModel()
         {
-            //Value = 5;
-
-            Task.Run(() =>
-            {
-                for (int i = 0; i < 100; i++)
-                {
-                    Value++;
-                    Task.Delay(1000).Wait();
-                }
-            });
-        }
-
-        private void Increment()
-        {
-            _value++;
-        }
-
-        private void Decrement()
-        {
-            _value--;
+            Value = 5;
         }
     }
 }

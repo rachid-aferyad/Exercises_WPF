@@ -29,8 +29,8 @@
 
         <TextBlock Grid.RowSpan="2" TextAlignment="Center" VerticalAlignment="Center" FontSize="60" Text="{Binding Value}"/>
 
-        <Button Grid.Column="1" Content="+" Style="{StaticResource ButtonBaseStyle}"/>
-        <Button Grid.Row="1" Grid.Column="1" Content="-" Style="{StaticResource ButtonBaseStyle}"/>
+        <Button Grid.Column="1" Content="+" Style="{StaticResource ButtonBaseStyle}" Command="{Binding IncrementCommand}"/>
+        <Button Grid.Row="1" Grid.Column="1" Content="-" Style="{StaticResource ButtonBaseStyle}" Command="{Binding DecrementCommand}"/>
 
     </Grid>
 </Window>
