@@ -9,7 +9,19 @@ namespace IncrementDecrementMVVM.Commands
 {
     class DelegateCommand : ICommand
     {
-        public event EventHandler CanExecuteChanged;
+        public event EventHandler CanExecuteChanged
+        {
+            add
+            {
+                if (_canExecute is not null)
+                    CommandManager.RequerySuggested += value;
+            }
+            remove
+            {
+                if (_canExecute is not null)
+                    CommandManager.RequerySuggested -= value;
+            }
+        }
 
         private readonly Action _execute;
         private readonly Func<bool> _canExecute;
@@ -32,7 +44,19 @@ namespace IncrementDecrementMVVM.Commands
 
     class DelegateCommand<T> : ICommand
     {
-        public event EventHandler CanExecuteChanged;
+        public event EventHandler CanExecuteChanged
+        {
+            add
+            {
+                if (_canExecute is not null)
+                    CommandManager.RequerySuggested += value;
+            }
+            remove
+            {
+                if (_canExecute is not null)
+                    CommandManager.RequerySuggested -= value;
+            }
+        }
 
         private readonly Action<T> _execute;
         private readonly Func<T, bool> _canExecute;
